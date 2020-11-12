@@ -5,7 +5,6 @@ ruby '2.6.6'
 
 gem 'autoprefixer-rails'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
-
 gem 'font-awesome-sass', '~> 5.12.0'
 gem 'simple_form'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
