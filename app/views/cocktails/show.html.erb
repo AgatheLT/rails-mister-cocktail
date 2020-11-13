@@ -1,1 +1,7 @@
-<%= link_to "Create a new dose", new_cocktail_dose_path(@cocktail) %>
+<%= @cocktail.name%>
+
+<% @cocktail.ingredients.each do |el|%>
+  <%= print el.name %>
+<% end %>
+
+<%= link_to "Create a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-info"%>
