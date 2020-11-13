@@ -1,7 +1,13 @@
-<%= @cocktail.name%>
+<h1><%= @cocktail.name%></h1>
+
 
 <% @cocktail.ingredients.each do |el|%>
-  <%= print el.name %>
+  <%= el.name %>
 <% end %>
 
+<% @cocktail.doses.each do |drink| %>
+  <%= drink.description%>
+<% end %>
+
+<p class="card-title"><%= link_to "Go back to the list of cocktails", cocktails_path%></p>
 <%= link_to "Create a new dose", new_cocktail_dose_path(@cocktail), class: "btn btn-info"%>
