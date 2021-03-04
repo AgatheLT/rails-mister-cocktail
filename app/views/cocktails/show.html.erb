@@ -1,7 +1,15 @@
 <h1>Your cocktail: <%= @cocktail.name %> </h1>
 
+<% if @cocktail.photos.attached? %>
+<div class="image" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path @cocktail.photos.first.key, height: 500, width: 400, crop: :fill %>')">
+  Good cocktail
+</div>
+<% end %>
+
+
 <div>
 <h3>Recipe</h3>
+
   <table class="table">
     <tbody>
       <thead>
